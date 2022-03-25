@@ -1,0 +1,1 @@
+console.log('Hoşgeldiniz 30GündeJavaScript')
