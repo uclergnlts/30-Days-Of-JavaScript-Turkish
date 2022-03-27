@@ -281,11 +281,12 @@ let country = 'Finland'
 let city = 'Helsinki'
 let language = 'JavaScript'
 let job = 'teacher'
-let quote = "The saying,'Seeing is Believing' is not correct in 2020."
-let quotWithBackTick = `The saying,'Seeing is Believing' is not correct in 2020.`
+let quote = "2020'de 'Görmek İnanmaktır' sözü doğru değildir."
+let quotWithBackTick = `2020'de 'Görmek İnanmaktır' sözü doğru değildir.`
 ```
 
 ### String Concatenation
+_Tr = String birleştirme_
 
 İki veya daha fazla diziyi birbirine bağlamaya birleştirme denir.
 Önceki Dize bölümünde belirtilen dizeleri kullanarak:
@@ -301,11 +302,10 @@ Asabeneh Yetayeh
 Dizeleri farklı şekillerde birleştirebiliriz.
 
 #### Concatenating Using Addition Operator
-
-Concatenating using the addition operator is an old way. This way of concatenating is tedious and error-prone. It is good to know how to concatenate this way, but I strongly suggest to use the ES6 template strings (explained later on).
-
+_Tr = Toplama Operatörünü Kullanarak Birleştirme_
+Ekleme operatörünü kullanarak birleştirme eski bir yoldur.Bu birleştirme yöntemi sıkıcı ve hataya açıktır. Bu şekilde nasıl birleştirileceğini bilmek iyidir, ancak ES6 şablon dizelerini kullanmanızı şiddetle tavsiye ederim (daha sonra açıklanacaktır).
 ```js
-// Declaring different variables of different data types
+// Farklı veri türlerinin farklı değişkenlerini bildirme
 let space = ' '
 let firstName = 'Asabeneh'
 let lastName = 'Yetayeh'
@@ -316,8 +316,8 @@ let job = 'teacher'
 let age = 250
 
 
-let fullName =firstName + space + lastName
-let personInfoOne = fullName + '. I am ' + age + '. I live in ' + country; // ES5 string addition
+let fullName =firstName + space + lastName //ekleme operetörü ile eklemek
+let personInfoOne = fullName + '. I am ' + age + '. I live in ' + country; // ES5 dize ekleme
 
 console.log(personInfoOne)
 ```
@@ -327,9 +327,10 @@ Asabeneh Yetayeh. I am 250. I live in Finland
 ```
 
 #### Long Literal Strings
+_Tr = Uzun Değişmez Dizeler_
 
-A string could be a single character or paragraph or a page. If the string length is too big it does not fit in one line. We can use the backslash character (\\) at the end of each line to indicate that the string will continue on the next line.
-**Example:**
+Bir dize, tek bir karakter veya paragraf veya bir sayfa olabilir. Dize uzunluğu çok büyükse bir satıra sığmaz. Dizenin bir sonraki satırda devam edeceğini belirtmek için her satırın sonunda ters eğik çizgi karakterini (\\) kullanabiliriz.
+**Örnek:**
 
 ```js
 const paragraph = "My name is Asabeneh Yetayeh. I live in Finland, Helsinki.\
@@ -348,11 +349,11 @@ console.log(paragraph)
 
 In JavaScript and other programming languages \ followed by some characters is an escape sequence. Let's see the most common escape characters:
 
-- \n: new line
-- \t: Tab, means 8 spaces
-- \\\\: Back slash
-- \\': Single quote (')
-- \\": Double quote (")
+- \n: Alt satıra geçer.
+- \t: Boşluk bırakır
+- \\\\: Ters eğik çizgi
+- \\': Tek Tırnak (')
+- \\": Çift Tırnak (")
   
 ```js
 console.log('I hope everyone is enjoying the 30 Days Of JavaScript challenge.\nDo you ?') // line break
@@ -367,7 +368,7 @@ console.log("In every programming language it starts with \'Hello, World!\'")
 console.log('The saying \'Seeing is Believing\' isn\'t correct in 2020')
 ```
 
-Output in console:
+Konsol Çıktısı:
 
 ```sh
 I hope everyone is enjoying the 30 Days Of JavaScript challenge.
@@ -384,8 +385,9 @@ The saying 'Seeing is Believing' isn't correct in 2020
 ```
 
 #### Template Literals (Template Strings)
+_Tr = Şablon Değişmezleri (Şablon Dizeleri)_
 
-To create a template strings, we use two back-ticks. We can inject data as expressions inside a template string. To inject data, we enclose the expression with a curly bracket({}) preceded by a $ sign. See the syntax below.
+Bir şablon dizeleri oluşturmak için iki geri tik kullanırız. Verileri bir şablon dizesinin içine ifadeler olarak enjekte edebiliriz. Verileri enjekte etmek için, ifadeyi bir $ işareti ile başlayan bir küme parantezinin({}) içine alırız. Aşağıdaki sözdizimine bakın.
 
 ```js
 //Syntax
@@ -393,16 +395,16 @@ To create a template strings, we use two back-ticks. We can inject data as expre
 `String literal text ${expression}`
 ```
 
-**Example: 1**
+**Örnek: 1**
 
 ```js
-console.log(`The sum of 2 and 3 is 5`)              // statically writing the data
+console.log(`The sum of 2 and 3 is 5`)              // verileri statik olarak yazma
 let a = 2
 let b = 3
-console.log(`The sum of ${a} and ${b} is ${a + b}`) // injecting the data dynamically
+console.log(`The sum of ${a} and ${b} is ${a + b}`) // verileri dinamik olarak enjekte etme
 ```
 
-**Example:2**
+**Örnek:2**
 
 ```js
 let firstName = 'Asabeneh'
@@ -414,7 +416,7 @@ let job = 'teacher'
 let age = 250
 let fullName = firstName + ' ' + lastName
 
-let personInfoTwo = `I am ${fullName}. I am ${age}. I live in ${country}.` //ES6 - String interpolation method
+let personInfoTwo = `I am ${fullName}. I am ${age}. I live in ${country}.` //ES6 - Dize enterpolasyon yöntemi
 let personInfoThree = `I am ${fullName}. I live in ${city}, ${country}. I am a ${job}. I teach ${language}.`
 console.log(personInfoTwo)
 console.log(personInfoThree)
@@ -425,7 +427,7 @@ I am Asabeneh Yetayeh. I am 250. I live in Finland.
 I am Asabeneh Yetayeh. I live in Helsinki, Finland. I am a teacher. I teach JavaScript.
 ```
 
-Using a string template or string interpolation method, we can add expressions, which could be a value, or some operations (comparison, arithmetic operations, ternary operation).
+Bir dize şablonu veya dize enterpolasyon yöntemi kullanarak, bir değer olabilecek ifadeler veya bazı işlemler (karşılaştırma, aritmetik işlemler, üçlü işlem) ekleyebiliriz.
 
 ```js
 let a = 2
@@ -438,11 +440,11 @@ console.log(`${a} is greater than ${b}: ${a > b}`)
 ```
 
 ### String Methods
+_Tr = Dize Yöntemleri_
 
-Everything in JavaScript is an object. A string is a primitive data type that means we can not modify it once it is created. The string object has many string methods. There are different string methods that can help us to work with strings.
+JavaScript'teki her şey bir nesnedir. Bir dize, ilkel bir veri türüdür, bu, oluşturulduktan sonra onu değiştiremeyeceğimiz anlamına gelir. string nesnesinin birçok string metodu vardır. Dizelerle çalışmamıza yardımcı olabilecek farklı dize yöntemleri vardır.
 
-1. *length*: The string *length* method returns the number of characters in a string included empty space.
-
+1. *length*: dize *length* yöntemi, boş alan içeren bir dizedeki karakter sayısını döndürür.
 **Example:**
 
 ```js
