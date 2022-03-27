@@ -454,11 +454,11 @@ let firstName = 'Asabeneh'
 console.log(firstName.length)  // 8
 ```
 
-2. *Accessing characters in a string*: We can access each character in a string using its index. In programming, counting starts from 0. The first index of the string is zero, and the last index is the length of the string minus one.
+2. *Bir dizedeki karakterlere erişme*: Dizindeki her karaktere dizinini kullanarak erişebiliriz. Programlamada, sayma 0'dan başlar. Dizinin ilk dizini sıfırdır ve son dizin, dizinin uzunluğu eksi birdir.
 
-  ![Accessing sting by index](../images/string_indexes.png)
+  ![String değişkeninde ki sıramaya bakalım(../images/string_indexes.png)
   
-Let us access different characters in 'JavaScript' string.
+'JavaScript' dizisindeki farklı karakterlere erişelim.
 
 ```js
 let string = 'JavaScript'
@@ -478,7 +478,7 @@ console.log(lastIndex)  // 9
 console.log(string[lastIndex])    // t
 ```
 
-3. *toUpperCase()*: this method changes the string to uppercase letters.
+3. *toUpperCase()*: bu yöntem dizeyi büyük harflere dönüştürür.
 
 ```js
 let string = 'JavaScript'
@@ -494,7 +494,7 @@ let country = 'Finland'
 console.log(country.toUpperCase())    // FINLAND
 ```
 
-4. *toLowerCase()*: this method changes the string to lowercase letters.
+4. *toLowerCase()*: bu yöntem dizeyi küçük harflere dönüştürür.
 
 ```js
 let string = 'JavasCript'
@@ -510,7 +510,7 @@ let country = 'Finland'
 console.log(country.toLowerCase())   // finland
 ```
 
-5. *substr()*: It takes two arguments, the starting index and number of characters to slice.
+5. *substr()*: İki argüman alır, başlangıç ​​dizini ve bitiş dizinindeki elemanları yazdırır.
 
 ```js
 let string = 'JavaScript'
@@ -520,7 +520,7 @@ let country = 'Finland'
 console.log(country.substr(3, 4))   // land
 ```
 
-6. *substring()*: It takes two arguments, the starting index and the stopping index but it doesn't include the character at the stopping index.
+6. *substring()*: Başlangıç ​​indeksi ve bitiş indeksi olmak üzere iki argüman alır, ancak bitiş indeksindeki karakteri içermez.
 
 ```js
 let string = 'JavaScript'
@@ -536,26 +536,26 @@ console.log(country.substring(3, 7))   // land
 console.log(country.substring(3))      // land
 ```
 
-7. *split()*: The split method splits a string at a specified place.
+7. *split()*: Split yöntemi, bir dizeyi belirtilen bir yerde böler.
 
 ```js
 let string = '30 Days Of JavaScript'
 
-console.log(string.split())     // Changes to an array -> ["30 Days Of JavaScript"]
-console.log(string.split(' '))  // Split to an array at space -> ["30", "Days", "Of", "JavaScript"]
+console.log(string.split())     // Bir dizideki değişiklikler-> ["30 Days Of JavaScript"]
+console.log(string.split(' '))  // Dizeyi bölme -> ["30", "Days", "Of", "JavaScript"]
 
 let firstName = 'Asabeneh'
 
-console.log(firstName.split())    // Change to an array - > ["Asabeneh"]
-console.log(firstName.split(''))  // Split to an array at each letter ->  ["A", "s", "a", "b", "e", "n", "e", "h"]
+console.log(firstName.split())    // Arraye dönüştür - > ["Asabeneh"]
+console.log(firstName.split(''))  // Harflerine böl ->  ["A", "s", "a", "b", "e", "n", "e", "h"]
 
 let countries = 'Finland, Sweden, Norway, Denmark, and Iceland'
 
-console.log(countries.split(','))  // split to any array at comma -> ["Finland", " Sweden", " Norway", " Denmark", " and Iceland"]
+console.log(countries.split(','))  // virgülle herhangi bir diziye bölün -> ["Finland", " Sweden", " Norway", " Denmark", " and Iceland"]
 console.log(countries.split(', ')) //  ["Finland", "Sweden", "Norway", "Denmark", "and Iceland"]
 ```
 
-8. *trim()*: Removes trailing space in the beginning or the end of a string.
+8. *trim()*: Bir dizenin başındaki veya sonundaki boşlukları kaldırır.
 
 ```js
 let string = '   30 Days Of JavaScript   '
@@ -566,7 +566,7 @@ console.log(string.trim(' '))
 let firstName = ' Asabeneh '
 
 console.log(firstName)
-console.log(firstName.trim())  // still removes spaces at the beginning and the end of the string
+console.log(firstName.trim())  //dizenin başındaki ve sonundaki boşlukları kaldırır
 ```
 
 ```sh
@@ -576,13 +576,13 @@ console.log(firstName.trim())  // still removes spaces at the beginning and the 
 Asabeneh
 ```
 
-9. *includes()*: It takes a substring argument and it checks if substring argument exists in the string. *includes()* returns a boolean. If a substring exist in a string, it returns true, otherwise it returns false.
+9. *includes()*: Bir alt dize argümanı alır ve dizede alt dize argümanının olup olmadığını kontrol eder.. *includes()* bir boole döndürür. Bir dizede bir alt dize varsa, true değerini döndürür, aksi takdirde false değerini döndürür..
 
 ```js
 let string = '30 Days Of JavaScript'
 
 console.log(string.includes('Days'))     // true
-console.log(string.includes('days'))     // false - it is case sensitive!
+console.log(string.includes('days'))     // false - büyük/küçük harfe duyarlıdır!
 console.log(string.includes('Script'))   // true
 console.log(string.includes('script'))   // false
 console.log(string.includes('java'))     // false
@@ -596,7 +596,7 @@ console.log(country.includes('land'))    // true
 console.log(country.includes('Land'))    // false
 ```
 
-10. *replace()*: takes as a parameter the old substring and a new substring.
+10. *replace()*: eski alt dizeyi ve yeni bir alt dizeyi parametre olarak alır.
 
 ```js
 string.replace(oldsubstring, newsubstring)
@@ -610,10 +610,10 @@ let country = 'Finland'
 console.log(country.replace('Fin', 'Noman'))       // Nomanland
 ```
 
-11. *charAt()*: Takes index and it returns the value at that index
+11. *charAt()*: Dizini alır ve o dizindeki değeri döndürür
 
 ```js
-string.charAt(index)
+string.charAt(index) 
 ```
 
 ```js
@@ -624,7 +624,7 @@ let lastIndex = string.length - 1
 console.log(string.charAt(lastIndex)) // t
 ```
 
-12. *charCodeAt()*: Takes index and it returns char code (ASCII number) of the value at that index
+12. *charCodeAt()*: Dizini alır ve o dizindeki değerin karakter kodunu (ASCII numarası) döndürür
 
 ```js
 string.charCodeAt(index)
@@ -639,7 +639,7 @@ console.log(string.charCodeAt(lastIndex)) // t ASCII is 116
 
 ```
 
-13.  *indexOf()*: Takes a substring and if the substring exists in a string it returns the first position of the substring if does not exist it returns -1
+13.  *indexOf()*: Bir alt dize alır ve bir dizede alt dize varsa, alt dizenin ilk konumunu döndürür, yoksa -1 döndürür
 
 ```js
 string.indexOf(substring)
@@ -657,7 +657,7 @@ console.log(string.indexOf('Script'))     //15
 console.log(string.indexOf('script'))     // -1
 ```
 
-14.  *lastIndexOf()*: Takes a substring and if the substring exists in a string it returns the last position of the substring if it does not exist it returns -1
+14.  *lastIndexOf()*: Bir alt dize alır ve bir dizede alt dize varsa, alt dizenin son konumunu döndürür, yoksa -1 döndürür
 
 
 ```js
@@ -687,7 +687,7 @@ let country = 'Fin'
 console.log(country.concat("land")) // Finland
 ```
 
-16. *startsWith*: it takes a substring as an argument and it checks if the string starts with that specified substring. It returns a boolean(true or false).
+16. *startsWith*: bağımsız değişken olarak bir alt dize alır ve dizenin belirtilen alt dizeyle başlayıp başlamadığını kontrol eder. Bir boole (true veya false) döndürür.
 
 ```js
 //syntax
@@ -708,7 +708,7 @@ console.log(country.startsWith('fin'))   // false
 console.log(country.startsWith('land'))  //  false
 ```
 
-17. *endsWith*: it takes a substring as an argument and it checks if the string ends with that specified substring. It returns a boolean(true or false).
+17. *endsWith*: argüman olarak bir alt dize alır ve dizenin belirtilen alt dizeyle bitip bitmediğini kontrol eder. Bir boole (true veya false) döndürür.
 
 ```js
 string.endsWith(substring)
